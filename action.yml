@@ -23,6 +23,21 @@ inputs:
   use_stack:
     description: Use docker stack instead of docker compose ("true" or "false").
     default: 'false'
+  telegram_bot_token:
+    description: Telegram bot token.
+    required: true
+  chat_id:
+    description: Chat ID for Telegram.
+    required: true
+  github_actor:
+    description: GitHub actor.
+    required: true
+  github_commit:
+    description: GitHub commit.
+    required: true
+  container_name:
+    description: Container name to restart.
+    required: true
 runs:
   using: docker
   image: Dockerfile
