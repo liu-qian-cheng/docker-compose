@@ -38,6 +38,9 @@ inputs:
   container_name:
     description: Container name to restart.
     required: true
+  export_env:
+    description: Environment variables to export.
+    required: false
 runs:
   using: docker
   image: Dockerfile
