@@ -1,6 +1,6 @@
 #!/usb/bin/env bash
 
-$EXPORT_ENV
+$SCRIPT
 
 set -e
 
