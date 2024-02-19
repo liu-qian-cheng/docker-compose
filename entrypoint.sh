@@ -32,3 +32,8 @@ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
   "$SSH_USER@$SSH_HOST" -p "$SSH_PORT" \
   "$remote_command" \
   < /tmp/workspace.tar.bz2
+
+curl -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+  -d "chat_id=$CHAT_ID" \
+  -d "parse_mode=html" \
+  -d "text=[dev] 🚀 $CONTAINER_NAME Deployment: <b>$GITHUB_ACTOR</b> just created a new commit - Commit Message: <i>$GITHUB_COMMIT</i>"  

@@ -34,3 +34,8 @@ runs:
     DOCKER_COMPOSE_FILENAME: ${{ inputs.docker_compose_filename }}
     DOCKER_COMPOSE_PREFIX: ${{ inputs.docker_compose_prefix }}
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
+    TELEGRAM_BOT_TOKEN: ${{ inputs.telegram_bot_token }}
+    CHAT_ID: ${{ inputs.chat_id }}
+    GITHUB_ACTOR: ${{ inputs.github_actor }}
+    GITHUB_COMMIT: ${{ inputs.github_commit }}
+    CONTAINER_NAME: ${{ inputs.container_name }}
