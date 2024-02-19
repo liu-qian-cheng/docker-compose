@@ -35,7 +35,3 @@ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
   "$SSH_USER@$SSH_HOST" -p "$SSH_PORT" \
   "$remote_command" \
   < /tmp/workspace.tar.bz2
-
-TELEGRAM_REQUEST="POST /bot$TELEGRAM_BOT_TOKEN/sendMessage HTTP/1.1\r\nHost: api.telegram.org\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 127\r\n\r\nchat_id=$CHAT_ID&parse_mode=html&text=[dev] 🚀 $CONTAINER_NAME Deployment: <b>$GITHUB_ACTOR</b> just created a new commit - Commit Message: <i>$GITHUB_COMMIT</i>"
-
-echo -e "$TELEGRAM_REQUEST" | nc api.telegram.org 443

@@ -23,24 +23,7 @@ inputs:
   use_stack:
     description: Use docker stack instead of docker compose ("true" or "false").
     default: 'false'
-  telegram_bot_token:
-    description: Telegram bot token.
-    required: true
-  chat_id:
-    description: Chat ID for Telegram.
-    required: true
-  github_actor:
-    description: GitHub actor.
-    required: true
-  github_commit:
-    description: GitHub commit.
-    required: true
-  container_name:
-    description: Container name to restart.
-    required: true
-  export_env:
-    description: Environment variables to export.
-    required: false
+
 runs:
   using: docker
   image: Dockerfile
@@ -52,9 +35,3 @@ runs:
     DOCKER_COMPOSE_FILENAME: ${{ inputs.docker_compose_filename }}
     DOCKER_COMPOSE_PREFIX: ${{ inputs.docker_compose_prefix }}
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
-    TELEGRAM_BOT_TOKEN: ${{ inputs.telegram_bot_token }}
-    CHAT_ID: ${{ inputs.chat_id }}
-    GITHUB_ACTOR: ${{ inputs.github_actor }}
-    GITHUB_COMMIT: ${{ inputs.github_commit }}
-    CONTAINER_NAME: ${{ inputs.container_name }}
-    EXPORT_ENV: ${{ inputs.export_env }}
