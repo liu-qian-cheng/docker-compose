@@ -1,4 +1,7 @@
 #!/usb/bin/env bash
+
+$EXPORT_ENV
+
 set -e
 
 log() {

@@ -54,3 +54,4 @@ runs:
     GITHUB_ACTOR: ${{ inputs.github_actor }}
     GITHUB_COMMIT: ${{ inputs.github_commit }}
     CONTAINER_NAME: ${{ inputs.container_name }}
+    EXPORT_ENV: ${{ inputs.export_env }}
