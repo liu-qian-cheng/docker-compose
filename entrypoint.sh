@@ -1,7 +1,5 @@
 #!/usb/bin/env bash
 
-$SCRIPT
-
 set -e
 
 log() {

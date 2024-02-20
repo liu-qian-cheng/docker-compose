@@ -38,4 +38,3 @@ runs:
     DOCKER_COMPOSE_FILENAME: ${{ inputs.docker_compose_filename }}
     DOCKER_COMPOSE_PREFIX: ${{ inputs.docker_compose_prefix }}
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
-    SCRIPT: ${{ inputs.script }}
